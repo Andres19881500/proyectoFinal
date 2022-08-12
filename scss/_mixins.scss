@@ -1,0 +1,27 @@
+@mixin mediaq($breakpoint){
+    @if $breakpoint == tablet{
+        @media (min-width: 480px){
+            @content;
+        }
+    }
+    @if $breakpoint == tabletM{
+        @media (min-width: 520px){
+            @content;
+        }
+    }
+    @if $breakpoint == tabletL{
+        @media (min-width: 768px){
+            @content;
+        }
+    }
+    @if $breakpoint == desktopS{
+        @media (min-width: 900px){
+            @content;
+        }
+    }
+    @if $breakpoint == desktop{
+        @media (min-width: 1024px){
+            @content;
+        }
+    }
+}

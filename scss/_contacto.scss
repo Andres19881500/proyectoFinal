@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Inter", sans-serif;
+}
+
+.contacto__main {
+    h2{
+        padding: 15px 15px 15px 30px;
+        font-size: $textLg;
+        font-weight: $textBold;
+    }
+}
+
+#contenedor__grid--contacto {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto; 
+    grid-template-areas: 
+    "contacto__formulario"
+    "contenedor__iframe";
+}
+
+.contenedor__iframe {
+    grid-area: contenedor__iframe;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.contacto__formulario {
+    grid-area: contacto__formulario;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $azulHaras;
+    div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90vw;
+        max-width: 400px;
+        height: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+        label{
+            font-size: $textFooter;
+            color: $white;
+        }
+        legend{
+            font-size: $textFooter;
+            font-weight: $textBold;
+            color: $white;
+        }
+    }
+}
+
+.contactanos {
+    background-color: $azulHaras;
+    color: $white;
+    height: auto;
+}
+
+.boton {
+    background-color: map-get($map: $coloresbtn, $key: "aceptar");
+    color: $black;
+    width: 100px;
+    height: 40px;
+    border: none;
+    box-shadow: none;
+    font-size: $textFooter;
+    font-weight: $textBold;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    &:hover {
+        background-color: $black;
+        color: $white;
+    }
+}
+
+.boton-cancelar {
+    @extend .boton;
+    background-color: map-get($map: $coloresbtn, $key: "cancelar");
+    &:hover {
+        background-color: $white;
+        color: $black;
+    };
+}
+
+@include mediaq(desktopS) {
+    #contenedor__grid--contacto {
+        display: grid;
+        grid-template-columns: 50vw 50vw;
+        grid-template-rows: auto; 
+        grid-template-areas: 
+        "contenedor__iframe contacto__formulario";
+    }
+
+    .contenedor__iframe {
+        grid-area: contenedor__iframe;
+        display: flex;
+        justify-content: center;
+        width: 50vw;
+        height: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    iframe {
+        width: 428px;
+        height: 400px;
+    }
+
+    .caja__formulario {
+        display: flex;
+        justify-content: center;
+   }
+   
+    .contacto__formulario {
+        grid-area: contacto__formulario;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $azulHaras;
+        width: 428px;
+        height: 400px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+    }
+    
+}
+
+

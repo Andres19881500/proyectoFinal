@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Inter", sans-serif;
+}
+
+#contenedor__grid--palmartv {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto auto auto auto; 
+    grid-template-areas: 
+    "videos__video--principal"
+    "videos__video--secundaria"
+    "videos__video--secundaria"
+    "videos__video--secundaria"
+    "videos__video--secundaria";
+}
+
+
+.videos__video--principal {
+    grid-area: videos__video--principal;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    a{
+        display: flex;
+        justify-content: center;
+    }
+    img{
+        width: 100%;
+        height: auto
+    }
+}
+
+.contenedor__video--principal {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: $lightGray;
+    &:hover{
+        background-color: $mediumGray;
+    }
+}
+
+
+.video__principal--textos {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 15px;
+    h2{
+        font-size: $textSm;
+        font-weight: $textBold;
+        margin-top: 15px;
+    }
+    p{
+        font-size: $textFooter;
+        margin: 15px 0px 15px 0px;
+        overflow-y: auto;
+    }
+}
+
+.section__videos--secundaria {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.videos__video--secundaria {
+    grid-area: videos__video--secundaria;
+    width: 90%;
+    height: 120px;
+    display: flex;
+    margin-bottom: 20px;
+    img{
+        height: 120px;
+        width: 120px;
+    }
+}
+
+.video__secundaria--textos {
+    background-color: #e8eaed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 15px;
+    height: 120px;
+    overflow-y: auto;
+    &:hover{
+        background-color: $mediumGray;
+    }
+    h2{
+        font-size: $textSm;
+        font-weight: $textBold;
+    }
+    p{
+        font-size: $textFooter;
+    }
+}
+
+@include mediaq(tabletL) {
+    #contenedor__grid--palmartv {
+        display: grid;
+        grid-template-columns: 40vw 60vw;
+        grid-template-rows: auto auto auto auto; 
+        grid-template-areas: 
+        "videos__video--principal videos__video--secundaria"
+        "videos__video--principal videos__video--secundaria"
+        "videos__video--principal videos__video--secundaria"
+        "videos__video--principal videos__video--secundaria";
+    }
+
+    .videos__video--principal {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .video__principal--textos{
+        padding: 15px;
+        h2 {
+            font-size: $textMd;
+            font-weight: $textBold;
+            margin-top: 15px;
+    }
+        p{
+            font-size: $textSm;
+            margin: 15px 0px 15px 0px;
+        }
+    }
+
+    .section__videos--secundaria {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        margin-top: 30px;
+    }
+
+    .videos__video--secundaria {
+        width: 90%;
+        height: 150px;
+        display: flex;
+        overflow: hidden;
+        margin-bottom: 20px;
+        img{
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    .video__secundaria--textos {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 15px;
+        h2{
+            font-size: $textMd;
+            font-weight: $textBold;
+        }
+        p{
+            font-size: $textSm;
+        }
+    }
+}

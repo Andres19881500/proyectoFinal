@@ -1,0 +1,11 @@
+PARA SEO AGREGUE:
+
+Todos los titulos son Haras El Palmar - (descripción de cada pagina)
+
+META Description. En todas las paginas
+
+META Keywords. En todas las paginas
+
+En la pagina de contacto agregue un h2 (que no tenía) que dice "Contactanos"
+
+Los extends los aplique directo en el scss de _contacto.scss, en los botones del form.

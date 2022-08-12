@@ -1,0 +1,39 @@
+//No hice nesting porque son todo clases y id, es bootstrap
+.navbar-custom {
+    min-height: 50px;
+}
+.bg-gray {
+    background-color: gray;
+}
+
+#textos__navbar {
+    font-family: $fontMain;
+    color: $white;
+    font-size: $textSm;
+}
+
+.navbar-toggler-icon-blanco {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-image: url(/images/Untitled.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.navbar-toggler-border {
+    border: none;
+}
+
+nav {
+    a{
+        height: auto;
+        &:hover{
+            background-color: $animColor;
+        }
+    }
+}
+
+

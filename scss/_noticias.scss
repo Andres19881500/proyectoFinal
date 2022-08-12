@@ -1,0 +1,23 @@
+#texto__principal {
+    font-size: $textMd;
+}
+
+.contenedor__noticia {
+    background-color: $black;
+    &:hover {
+        background-color: $azulHaras;
+    }
+    a{ 
+        text-decoration: none;
+    }
+    h2{
+        font-size: $textSm;
+        font-weight: $textBold;
+        margin-bottom: 30px;
+        color: white;
+    }
+    p{
+        font-size: $textFooter;
+        color: white;
+    }
+}
