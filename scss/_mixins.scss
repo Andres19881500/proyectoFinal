@@ -24,4 +24,9 @@
             @content;
         }
     }
+    @if $breakpoint == desktopL{
+        @media (min-width: 1200px){
+            @content;
+        }
+    }
 }

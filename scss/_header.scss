@@ -23,7 +23,8 @@
 }
 
 .header__principal--titulo {
-    font-size: 2.5rem;
+    font-size: $textTituloSm;
+    font-family: $fontLogo;
 }
 
 @include mediaq(tablet) {
@@ -52,7 +53,8 @@
     }
     
     .header__principal--titulo {
-        font-size: 3.6rem;
+        font-size: $textTituloLg;
+        font-family: $fontLogo;
     }
 }
 

@@ -9,10 +9,10 @@ html {
     font-family: "Inter", sans-serif;
 }
 
-.main__index {
+.main__establecimiento {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
 }
 
 #contenedor__grid--establecimiento {
@@ -27,13 +27,14 @@ html {
 
 .image__principal {
     grid-area: image__principal;
-    width: 100vw;
+    width: 100%;
     height: auto;
+    object-fit: contain;
 }
 
 .caja__quienessomos {
     grid-area: caja__quienessomos;
-    width: 100vw;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -51,13 +52,13 @@ html {
 
 .caja__padrillos {
     grid-area: caja__padrillos;
-    width: 100%;
+    width: 100vw;
     background-color: $lightGray;
     padding-bottom: 20px;
 }
 
 .caja__padrillos--textoprin {
-    width: 100%;
+    width: 100vw;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -77,7 +78,7 @@ html {
     display: flex;
     flex-direction: column;
     height: auto;
-    width: 100%;
+    width: 100vw;
     padding: 20px 20px 20px 20px;
     margin-bottom: 20px;
     div{
@@ -127,12 +128,13 @@ html {
 }
 
 .caja__yeguas {
-    width: 100%;
+    width: 100vw;
     height: auto;
     background-color: $azulHaras;
     padding-bottom: 20px;
     display: flex;
     flex-direction: column;
+    align-content: center;
     flex-wrap: nowrap;
     align-items: center;
 }
@@ -156,10 +158,16 @@ html {
     }
 }
 
+.image__madame--julia {
+    display: none;
+}
+
+.image__mutuca {
+    display: none;
+}
 .caja__yeguas--figure {
     height: auto;
-    width: 100vw;
-    max-width: 1000px;
+    width: 100%;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -267,7 +275,95 @@ html {
             padding-bottom: 40px;
         }
         p{
-            font-size: 2rem;
+            font-size: $textMd;
         }
+    }
+}
+
+@include mediaq(desktopL) {
+    #contenedor__grid--yeguas {
+        display: grid;
+        grid-template-columns: 40vw 40vw;
+        grid-template-rows: 470px 410px 410px 410px 350px;
+        column-gap: 2px;
+        row-gap: 2px;
+        grid-template-areas: 
+        "image__madame--julia madame__julia"
+        "ataxia devil__glory"
+        "andadora lelite"
+        "mutuca image__mutuca"
+        "luna__clara rapsodia";
+    }
+
+    .image__madame--julia {
+        grid-area: image__madame--julia;
+        display: flex;
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        h2 {
+            font-size: $textLg;
+            font-weight: $textBold;
+            position: absolute;
+            padding: 30px;
+            color: $white;
+        }
+    }
+
+    .image__mutuca {
+        grid-area: image__mutuca;
+        display: flex;
+        width: auto;
+        height: auto;
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        h2 {
+            font-size: $textLg;
+            font-weight: $textBold;
+            position: absolute;
+            padding: 30px;
+            color: $white;
+        }
+    }
+
+    .madame__julia {
+        grid-area: madame__julia;
+    }
+
+    .devil__glory {
+        grid-area: devil__glory;
+    }
+
+    .ataxia {
+        grid-area: ataxia;
+    }
+
+    .andadora {
+        grid-area: andadora;
+    }
+
+    .lelite {
+        grid-area: lelite;
+    }
+
+    .mutuca {
+        grid-area: mutuca;
+    }
+
+    .luna__clara {
+        grid-area: luna__clara;
+    }
+
+    .rapsodia {
+        grid-area: rapsodia;
+    }
+
+    .caja__yeguas--figure {
+        margin-bottom: 0px;
     }
 }

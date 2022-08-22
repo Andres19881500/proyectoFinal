@@ -1,0 +1,123 @@
+.main__img--texto {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    img {
+        width: 100%;
+        height: auto;
+    }
+    a {
+        position: relative;
+        width: 100%;
+        padding: 20px;
+        background-color: $azulHarasHover;
+        text-decoration: none;
+        &:hover {
+            background-color: $azulHaras;
+        }
+    }
+    h2 {
+        font-size: $textNav;
+        font-weight: $textBold;
+        color: $white;
+    }
+    p {
+        font-size: $textFooter;
+        color: $white;
+    }
+}
+
+.carousel__etiqueta--mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    padding: 20px;
+    background-color: $azulHarasHover;
+    &:hover {
+        background-color: $azulHaras;
+    }
+    h2 {
+        font-size: $textNav;
+        font-weight: $textBold;
+        color: $white;
+    }
+    p {
+        font-size: $textFooter;
+        color: $white;
+    }
+}
+
+.carousel-caption{
+    a{
+        text-decoration: none;
+        color: $white;
+    }
+    h2{
+        font-size: $textNav;
+        font-weight: $textBold;
+    }
+    p{
+        font-size: $textFooter;
+    }
+}
+
+@include mediaq(tabletL) {
+        .main__img--texto {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        width: 100vw;
+        height: auto;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        a {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 70%;
+            margin-bottom: 1.25rem;
+            padding: 20px;
+            background-color: $azulHarasOpacity;
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+            text-decoration: none;
+            &:hover {
+                background-color: $azulHaras;
+        }
+        }
+        h2 {
+            font-size: $textLg;
+            font-weight: $textBold;
+            color: $white;
+        }
+        p {
+            font-size: $textMd;
+            color: $white;
+        }
+}
+
+.carousel-caption{
+    background-color: $azulHarasOpacity;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    &:hover {
+        background-color: $azulHaras;
+    }
+    h2{
+        font-size: $textLg;
+    }
+    p{
+        font-size: $textMd;
+    }
+}
+
+.carousel__etiqueta--mobile {
+    display: none;
+}
+}

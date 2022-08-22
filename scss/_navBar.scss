@@ -1,9 +1,8 @@
-//No hice nesting porque son todo clases y id, es bootstrap
 .navbar-custom {
     min-height: 50px;
 }
 .bg-gray {
-    background-color: gray;
+    background-color: $darkGray;
 }
 
 #textos__navbar {
@@ -14,10 +13,10 @@
 
 .navbar-toggler-icon-blanco {
     display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
+    width: 3em;
+    height: 3em;
     vertical-align: middle;
-    background-image: url(../images/Untitled.svg);
+    background-image: url(../images/svg/Untitled.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -30,8 +29,9 @@
 nav {
     a{
         height: auto;
+        margin-right: 15px;
         &:hover{
-            background-color: $animColor;
+            background-color: $azulHaras;
         }
     }
 }

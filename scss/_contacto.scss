@@ -9,13 +9,6 @@ html {
     font-family: "Inter", sans-serif;
 }
 
-.contacto__main {
-    h2{
-        padding: 15px 15px 15px 30px;
-        font-size: $textLg;
-        font-weight: $textBold;
-    }
-}
 
 #contenedor__grid--contacto {
     display: grid;
@@ -43,6 +36,7 @@ html {
     flex-direction: column;
     align-items: center;
     background-color: $azulHaras;
+    height: 450px;
     div{
         display: flex;
         justify-content: space-between;
@@ -60,14 +54,23 @@ html {
             font-size: $textFooter;
             font-weight: $textBold;
             color: $white;
+            margin-top: 10px;
         }
     }
 }
 
+iframe {
+    width: 428px;
+    height: 450px;
+}
+
 .contactanos {
-    background-color: $azulHaras;
+    background-color: $azulHarasOpacity;
     color: $white;
     height: auto;
+    padding: 15px 15px 15px 30px;
+    font-size: $textLg;
+    font-weight: $textBold;
 }
 
 .boton {
@@ -79,7 +82,6 @@ html {
     box-shadow: none;
     font-size: $textFooter;
     font-weight: $textBold;
-    margin-bottom: 30px;
     margin-top: 30px;
     &:hover {
         background-color: $black;
@@ -116,7 +118,7 @@ html {
     }
     iframe {
         width: 428px;
-        height: 400px;
+        height: 450px;
     }
 
     .caja__formulario {
@@ -131,12 +133,34 @@ html {
         align-items: center;
         background-color: $azulHaras;
         width: 428px;
-        height: 400px;
+        height: 450px;
         margin-top: 20px;
         margin-bottom: 20px;
 
     }
     
+}
+
+@include mediaq(desktopL) {
+    .contacto__formulario {
+        width: 600px;
+        height: 600px;
+        div{
+            margin-top: 15px;
+            label {
+                font-size: $textSm;
+            }
+            legend {
+                font-size: $textSm;
+                margin-top: 30px;
+            }
+        }
+    }
+
+    iframe {
+        width: 600px;
+        height: 600px;
+    }
 }
 
 

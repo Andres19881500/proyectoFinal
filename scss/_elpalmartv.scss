@@ -15,9 +15,6 @@ html {
     grid-template-rows: auto auto auto auto auto; 
     grid-template-areas: 
     "videos__video--principal"
-    "videos__video--secundaria"
-    "videos__video--secundaria"
-    "videos__video--secundaria"
     "videos__video--secundaria";
 }
 
@@ -69,6 +66,7 @@ html {
     }
 }
 
+
 .section__videos--secundaria {
     width: 100%;
     height: auto;
@@ -114,14 +112,14 @@ html {
     #contenedor__grid--palmartv {
         display: grid;
         grid-template-columns: 40vw 60vw;
-        grid-template-rows: auto auto auto auto; 
+        grid-template-rows: auto; 
         grid-template-areas: 
-        "videos__video--principal videos__video--secundaria"
-        "videos__video--principal videos__video--secundaria"
-        "videos__video--principal videos__video--secundaria"
         "videos__video--principal videos__video--secundaria";
     }
 
+    .videos {
+        height: 700px;
+    }
     .videos__video--principal {
         width: 100%;
         height: auto;
@@ -146,8 +144,10 @@ html {
     .section__videos--secundaria {
         width: 100%;
         height: auto;
+        overflow-y: auto;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
         justify-items: center;
         margin-top: 30px;
@@ -167,6 +167,7 @@ html {
 
     .video__secundaria--textos {
         height: auto;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
