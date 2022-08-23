@@ -140,6 +140,7 @@ nav a:hover {
   height: auto;
   padding: 20px;
   background-color: rgba(42, 55, 66, 0.9215686275);
+  text-decoration: none;
 }
 .carousel__etiqueta--mobile:hover {
   background-color: #2A3742;
