@@ -917,6 +917,14 @@ iframe {
     height: 600px;
   }
 }
+.error404 {
+  width: 100vw;
+}
+.error404 img {
+  width: 100%;
+  height: auto;
+}
+
 .footer__principal {
   background-color: rgb(91, 91, 91);
   display: flex;
