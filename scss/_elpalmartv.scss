@@ -95,7 +95,7 @@ html {
     justify-content: space-around;
     padding: 15px;
     height: 120px;
-    overflow-y: auto;
+    overflow-y: hidden;
     &:hover{
         background-color: $mediumGray;
     }
