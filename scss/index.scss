@@ -1,67 +1,37 @@
-.main__img--texto {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: auto;
-    img {
-        width: 100%;
-        height: auto;
-    }
-    a {
-        position: relative;
-        width: 100%;
-        padding: 20px;
-        background-color: $azulHarasHover;
-        text-decoration: none;
-        &:hover {
-            background-color: $azulHaras;
-        }
-    }
-    h2 {
-        font-size: $textNav;
-        font-weight: $textBold;
-        color: $white;
-    }
-    p {
-        font-size: $textFooter;
-        color: $white;
-    }
-}
-
-.carousel__etiqueta--mobile {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: auto;
+.historia__main {
     padding: 20px;
-    background-color: $azulHarasHover;
-    text-decoration: none;
-    &:hover {
-        background-color: $azulHaras;
-    }
-    h2 {
-        font-size: $textNav;
-        font-weight: $textBold;
-        color: $white;
-    }
-    p {
-        font-size: $textFooter;
-        color: $white;
-    }
-}
-
-.carousel-caption{
-    a{
-        text-decoration: none;
-        color: $white;
-    }
     h2{
-        font-size: $textNav;
-        font-weight: $textBold;
+    font-size: $textTituloSm;
+    font-family: $fontLogo;
+    margin-bottom: 10px;
     }
     p{
-        font-size: $textFooter;
+    font-size: $textFooter;
+    font-family: $fontMain;
     }
+}
+
+.padrillos__main {
+    margin: 20px;
+    h2{
+    font-size: $textTituloSm;
+    font-family: $fontLogo;
+    margin-bottom: 10px;
+    }
+    p{
+    font-size: $textFooter;
+    font-family: $fontMain;
+    }
+    img{
+        width: 100%;
+        margin-bottom: 20px;
+    };
+}
+
+.padrillos__main--textos {
+    background-color: #898786;
+    color: #ffffff;
+    padding: 10px;
 }
 
 @include mediaq(tabletL) {

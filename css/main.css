@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500&family=Inter:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&family=Cormorant+SC:wght@300&family=Inter:wght@100;200;300;400;500;600;700&display=swap");
 .header__principal {
   width: 100vw;
   height: 60px;
@@ -25,7 +25,13 @@
 
 .header__principal--titulo {
   font-size: 2.5rem;
-  font-family: "Cormorant SC", serif;
+  font-family: "Bellefair", serif;
+}
+
+.header__navbar {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 }
 
 @media (min-width: 480px) {
@@ -53,7 +59,7 @@
   }
   .header__principal--titulo {
     font-size: 3.6rem;
-    font-family: "Cormorant SC", serif;
+    font-family: "Bellefair", serif;
   }
 }
 @media (min-width: 1024px) {
@@ -71,21 +77,21 @@
 }
 
 .bg-gray {
-  background-color: rgb(91, 91, 91);
+  background-color: white;
 }
 
 #textos__navbar {
   font-family: "Inter", sans-serif;
-  color: white;
+  color: black;
   font-size: 1.6rem;
 }
 
 .navbar-toggler-icon-blanco {
   display: inline-block;
-  width: 3em;
-  height: 3em;
+  width: 2em;
+  height: 2em;
   vertical-align: middle;
-  background-image: url(../images/svg/Untitled.svg);
+  background-image: url(../images/svg/III.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
@@ -103,68 +109,40 @@ nav a:hover {
   background-color: #2A3742;
 }
 
-.main__img--texto {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  height: auto;
-}
-.main__img--texto img {
-  width: 100%;
-  height: auto;
-}
-.main__img--texto a {
-  position: relative;
-  width: 100%;
+.historia__main {
   padding: 20px;
-  background-color: rgba(42, 55, 66, 0.9215686275);
-  text-decoration: none;
 }
-.main__img--texto a:hover {
-  background-color: #2A3742;
+.historia__main h2 {
+  font-size: 2.5rem;
+  font-family: "Bellefair", serif;
+  margin-bottom: 10px;
 }
-.main__img--texto h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: white;
-}
-.main__img--texto p {
+.historia__main p {
   font-size: 1.4rem;
-  color: white;
+  font-family: "Inter", sans-serif;
 }
 
-.carousel__etiqueta--mobile {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  height: auto;
-  padding: 20px;
-  background-color: rgba(42, 55, 66, 0.9215686275);
-  text-decoration: none;
+.padrillos__main {
+  margin: 20px;
 }
-.carousel__etiqueta--mobile:hover {
-  background-color: #2A3742;
+.padrillos__main h2 {
+  font-size: 2.5rem;
+  font-family: "Bellefair", serif;
+  margin-bottom: 10px;
 }
-.carousel__etiqueta--mobile h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: white;
-}
-.carousel__etiqueta--mobile p {
+.padrillos__main p {
   font-size: 1.4rem;
-  color: white;
+  font-family: "Inter", sans-serif;
+}
+.padrillos__main img {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.carousel-caption a {
-  text-decoration: none;
-  color: white;
-}
-.carousel-caption h2 {
-  font-size: 2rem;
-  font-weight: 600;
-}
-.carousel-caption p {
-  font-size: 1.4rem;
+.padrillos__main--textos {
+  background-color: #898786;
+  color: #ffffff;
+  padding: 10px;
 }
 
 @media (min-width: 768px) {

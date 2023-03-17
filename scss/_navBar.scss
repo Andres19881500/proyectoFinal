@@ -2,21 +2,21 @@
     min-height: 50px;
 }
 .bg-gray {
-    background-color: $darkGray;
+    background-color: $white;
 }
 
 #textos__navbar {
     font-family: $fontMain;
-    color: $white;
+    color: $black;
     font-size: $textSm;
 }
 
 .navbar-toggler-icon-blanco {
     display: inline-block;
-    width: 3em;
-    height: 3em;
+    width: 2em;
+    height: 2em;
     vertical-align: middle;
-    background-image: url(../images/svg/Untitled.svg);
+    background-image: url(../images/svg/III.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
